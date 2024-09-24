@@ -163,13 +163,7 @@ p{
 }
 
 .with-icon{
-    font-family: var(--body-font);
-    font-size: var(--btn-size);
-    letter-spacing: 1.25px;
-    font-weight: bold;
-    border-radius: 20px;
-    background-color: transparent;
-    border: none;
-    color: var(--primary-accent);
-    transition: all 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
