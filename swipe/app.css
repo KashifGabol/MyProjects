@@ -185,7 +185,7 @@ p{
 
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     max-width: var(--standard-width);
@@ -212,6 +212,7 @@ p{
 .navebar-btn:hover{
     background-color: rgba(250, 250, 250, 0.5);
 }
+
 /* Section Container */
 
 .section-container{
@@ -266,5 +267,5 @@ main{
 }
 .hero-phone{
     height: 628px;
-    
+    transform: translate(92px, -10px);
 }
