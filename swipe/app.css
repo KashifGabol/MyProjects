@@ -11,7 +11,7 @@
     --subtitle-size: 17px;
     --subtitle-hight:26px;
     --h1-size: 54px;
-    --h1-line-hight: 108px;
+    --h1-line-hight: 66px;
     --h2-size: 30px;
     --h2-line-hight: 75px;
     --h3-size: 20px;
@@ -243,4 +243,28 @@ p{
     align-items: start;
     box-sizing: border-box;
     padding: 0 var(--space-md) 0 0;
+}
+
+/* Hero */
+.hero .button-container{
+    display: flex;
+    margin: var(--space-md) 0;
+}
+.button-container button:nth-of-type(2){
+    color: var(--purple-2);
+    margin: 0 0 0 var(--space-md);
+}
+.hero p{
+    max-width: 400px;
+}
+main{
+    margin: var(--space-lg) 0;
+}
+.hero-phone-container{
+    align-items: flex-end;
+    height: 564px;
+}
+.hero-phone{
+    height: 628px;
+    
 }
