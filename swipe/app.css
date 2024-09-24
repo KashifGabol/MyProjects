@@ -26,6 +26,7 @@
     --bg-white: #fff;
     --bg-light:#f7f9fc;
     --primary-accent: #0a2540;
+    --standard-width:1144px;
 
     /* spacing for padding */
     --space-sm: 8px;
@@ -41,6 +42,11 @@ body{
     box-sizing: border-box;
     color: var(--text-dark);
     padding: var(--space-sm)0 0 0;
+    background-color: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 h1{
     font-family: var(--heading-font);
@@ -172,4 +178,33 @@ p{
 }
 .with-icon:hover >img{
     transform: translateX(4px);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--standard-width);
+    padding: 0 var(--space-md);
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.menu a{
+
+    margin: 0 var(--space-md);
+    font-weight: bold;
+    color: var(--text-light);
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+.navebar-btn{
+    background-color: rgba(250, 250, 250, 0.25);
+}
+.navebar-btn:hover{
+    background-color: rgba(250, 250, 250, 0.5);
 }
