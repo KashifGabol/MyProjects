@@ -167,3 +167,9 @@ p{
   justify-content: center;
   align-items: center;
 }
+.with-icon > img{
+    transition: all .25s ease;
+}
+.with-icon:hover >img{
+    transform: translateX(4px);
+}
