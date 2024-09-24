@@ -1,0 +1,35 @@
+header ,footer{
+    background-color: blueviolet;
+    height: 200px;
+}
+article{
+    background-color: aquamarine;
+    height: 400px;
+}
+
+aside{
+    background-color: orange;
+    height: 400px;
+}
+@media only screen and (min-width:800px)
+{
+    main{
+        display: flex;
+    }
+    article{
+        flex: 1 1 70%;
+    }
+    aside{
+        flex: 1 1 30%;
+    }
+}
+@media only screen and (min-width:900px)
+{
+    article{
+        flex:1 1 50%;
+    }
+    aside{
+        flex:1 1 50%;
+    }
+}
+

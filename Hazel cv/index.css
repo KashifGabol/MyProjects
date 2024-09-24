@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background-color: blueviolet;
+    min-height: 95vh;  
+    color: white;  
+    display: inline-block;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    color: white;
+}
+
+.navbar .links a{
+    text-decoration: none;
+    color: white;
+    margin-right: 32px;
+    font-size: 1.2rem;
+}
+.navbar p{
+    font-size: 1.7rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.hero .contact {
+    background-color: white;
+    font-style: italic;
+    text-decoration: none;
+    color: blueviolet;
+    padding: 16px 24px;
+    font-weight: bold;
+}
+.hero .contact:hover{
+    opacity: 0.8;
+}
+.hero .hero-content{
+    color: white;
+    padding: 0 15%;
+    font-size: 2rem;
+}
+
+.hero-content .tagline{
+    letter-spacing: 2px;
+    padding: 0 25px;
+}
+
+.tow-colom-section{
+    font-size: 1.2rem;
+}
+
+.tow-colom-section >p{
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+.tow-colom-section .skills{
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+    list-style: none;
+    padding: 0;
+}
+.tow-colom-section .skills li{
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 ;
+    margin-top: 12px; 
+}
+.blog-section{
+    background-color: rgb(178, 46, 255);
+    padding: 0 200px;
+}
+.content-section{
+    padding:  0 15%;
+}
+
+.tow-colom-section .blog-posts{
+width: 50%;
+float: left;
+box-sizing: border-box;
+}
+.blog-section .blog-heading{
+    font-weight: bold;
+    padding:  0 ;
+}
+.blog-section .blog-text{
+    font-size: 1rem;
+    padding:  0 ;
+}
+.blog-section .blog-date{
+    font-size: 1rem;
+    padding:  0 ;
+    color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 32px;
+}
+
+.event-section{
+    background-color:rgb(68, 2, 129);
+    padding: 64px 0;
+    display: inline-block;
+    color: white;
+    width: 100%;
+    
+}
+.event-content{
+    padding: 0 15%;
+}
+.event-cards{
+    width: 50%;
+    float: left;
+    margin-top: 24px;
+}
+
+.event-section .event-tittle{
+    font-size: 1.2rem;
+}
+.event-section .event-location{
+    font-size: 1rem;
+}
+.event-section .event-date{
+    font-size: 0.5rem;
+    color: gray;
+    margin-bottom: 32px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 0 ;
+    padding:  12px 0;
+}
+
+footer img{
+    width: 2rem;
+    height: 2rem;
+    margin: 0 8px;
+}

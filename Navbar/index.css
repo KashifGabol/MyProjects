@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+}
+
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+
+}
+
+.navlinks{
+    color: white;
+    margin: 0 30px;
+}
+
+.right{
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.left{
+    background-color: red;
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+
+.right{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: flex-end;
+}

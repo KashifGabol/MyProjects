@@ -1,0 +1,15 @@
+h1{
+    color: rgb(256,0, 0);
+    background-color: ;
+}
+h2{
+    color: #00009f;;
+}
+h3{
+    color: rgba(0, 120, 0, .5);
+}
+button{
+    background-color: rgb(0, 0, 0);
+    color: rgb(256, 256, 256);
+    border: #00009f;
+}

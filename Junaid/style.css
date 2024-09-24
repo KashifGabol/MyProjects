@@ -1,0 +1,33 @@
+body{
+    background-color: #6e6e6e;
+    font-family: sans-serif;
+}
+
+.container{
+    background-color: aliceblue;
+    width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 20px;
+    font-weight: 80px;
+}
+.container button{
+    color: aliceblue;
+    background-color: #6e6e6e;
+    padding: 30px 40px;
+    font-size: 28px;
+    font-weight: 100px;
+  
+}
+.container h2{
+    color: blueviolet;
+    text-transform: uppercase;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.container h1{
+    text-transform: uppercase;
+}
+.container p{
+    font-family:sans-serif;
+    font-size: 20px;
+}

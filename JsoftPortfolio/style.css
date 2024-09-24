@@ -1,0 +1,79 @@
+body{
+    font-family: Poppins;
+}
+h1{
+    display: inline-block;
+    font-weight: 300;
+    margin: 0px;
+}
+nav{
+    display: inline-block;
+}
+.links li{
+    display: inline-block;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+    margin: 0px 8px 0px 20px;
+    font-size: 20px;
+    font-weight: 200;
+}
+.navbar{
+    margin: 32px;
+}
+
+.links ul{
+            padding: 0px;
+}
+
+.active a{
+            border-bottom: 1px black solid;
+}
+
+.images{
+    padding: 20px;
+}
+.cards{
+    width: 49.75%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.cards img{
+    width: 600px;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+
+}
+.cards h2{
+    display: inline-block;
+    font-weight: 300px;
+    margin: 8px 0px 8px 0px;
+    font-weight: 200;
+}
+.aboutus{
+    width: 40%;
+    min-width: 600;
+  font-weight: 300;
+  margin: 100px;
+  display: inline-block;
+  margin-top: 100px 0 100px 200px;
+}
+.infoabout{
+    border-bottom: 2px;
+    font-weight: 400;
+    margin-top: 0;
+    display: inline-block;
+    padding: 8px;
+}
+.info2{
+    padding: 0;
+    margin: 0;
+}
+
+.cards img:hover{
+    opacity: 0.9;
+}
+
