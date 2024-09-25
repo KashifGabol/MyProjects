@@ -344,7 +344,7 @@ main{
 
 .card .icon{
     height: 50px;
-    margin: 0 0 var(--space-sm)0 ;
+    margin: 0 0 var(--space-sm) 0 ;
 }
 
 /* Integration Section */
@@ -369,4 +369,13 @@ main{
 }
 .integration-section .secondary-button{
     color: var(--light-blue);
+}
+#terminal-code{
+    max-width: 470px;
+    border-radius: 20px;
+}
+#api{
+    max-width: 470px;
+    margin: 0 0 var(--space-md) 0;
+    border-radius: 20px;
 }
