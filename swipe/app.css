@@ -34,6 +34,7 @@
     --space-lg: 32px;
     --space-xl: 64px;
 
+    --standard-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
 }
 body{
     font-family: var(--body-font);
@@ -256,6 +257,9 @@ p{
 .hero p{
     max-width: 400px;
 }
+.hero{
+    margin-top: var(--space-xl);
+}
 main{
     margin: var(--space-lg) 0;
 }
@@ -296,4 +300,35 @@ main{
 .unified-platfrom-section h3{
     max-width: 50%;
     margin-bottom: var(--space-md);
+}
+
+/* Graphic Grid */
+.graphic-grid{
+    display: grid;
+    grid-template-areas: 
+    "card invoice invoice"
+    "phone invoice invoice"
+    "phone dash dash";
+    padding: var(--space-lg) 0;
+    grid-gap: var(--space-lg);
+}
+#credit-card{
+    grid-area:card ;
+    width: 100%;
+    box-shadow: var(--standard-shadow);
+}
+#invoice{
+    grid-area: invoice;
+    width: 100%;
+    box-shadow: var(--standard-shadow);
+}
+#phone{
+    grid-area: phone;
+    width: 100%;
+    box-shadow: var(--standard-shadow);
+}
+#dash{
+    grid-area: dash;
+    width: 100%;
+    box-shadow: var(--standard-shadow);
 }
