@@ -60,12 +60,10 @@ h1{
 }
 h2{
     font-family: var(--heading-font);
-    font-weight: 500;
-    font-size: var(--h2-size);
+    font-weight: 600;
+    font-size: var(--h3-size);
     margin: 0;
     width: 100%;
-    letter-spacing: -0.25px;
-    line-height: var(--h2-line-hight);
 }
 h3{
     font-family: var(--heading-font);
@@ -282,4 +280,20 @@ main{
 .partners-grid img{
     height: 60px;
     place-self: center;
+}
+
+/* Unified Partners */
+.unified-platfrom-section .primary-button{
+    background-color: var(--purple-1);
+    margin: var(--space-md);
+}
+.unified-platfrom-section .primary-button:hover{
+    background-color: var(--primary-accent);
+}
+.unified-platfrom-section{
+    padding: var(--space-xl);
+}
+.unified-platfrom-section h3{
+    max-width: 50%;
+    margin-bottom: var(--space-md);
 }
