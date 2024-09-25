@@ -309,8 +309,9 @@ main{
     "card invoice invoice"
     "phone invoice invoice"
     "phone dash dash";
-    padding: var(--space-lg) 0;
+    padding: var(--space-lg) var(--space-lg) var(--space-lg) var(--space-lg);
     grid-gap: var(--space-lg);
+    margin: var(--space-lg) var(--space-lg) var(--space-lg) var(--space-lg) ;
 }
 #credit-card{
     grid-area:card ;
@@ -331,4 +332,17 @@ main{
     grid-area: dash;
     width: 100%;
     box-shadow: var(--standard-shadow);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: var(--space-sm) var(--space-md) var(--space-sm) 0;
+}
+
+.card .icon{
+    height: 50px;
+    margin: 0 0 var(--space-sm)0 ;
 }
