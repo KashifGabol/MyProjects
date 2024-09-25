@@ -346,3 +346,27 @@ main{
     height: 50px;
     margin: 0 0 var(--space-sm)0 ;
 }
+
+/* Integration Section */
+.integration-section{
+    color: var(--text-light);
+    background-color: var(--primary-accent);
+}
+.integration-section .card-container{
+    display: flex;
+    margin: var(--space-lg) 0;
+}
+.integration-section .card-container .card{
+    width: 50%;
+}
+.integration-section .primary-button{
+    background-color: var(--light-blue);
+    color: var(--primary-accent);
+    margin: var(--space-md) 0 0;
+}
+.integration-section .primary-button:hover{
+    background-color: var(--bg-white);
+}
+.integration-section .secondary-button{
+    color: var(--light-blue);
+}
