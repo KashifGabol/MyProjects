@@ -246,6 +246,11 @@ p{
 }
 
 /* Hero */
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .hero .button-container{
     display: flex;
     margin: var(--space-md) 0;
@@ -261,7 +266,7 @@ p{
     margin-top: var(--space-xl);
 }
 main{
-    margin: var(--space-lg) 0;
+width: 100%;
 }
 .hero-phone-container{
     align-items: flex-end;
@@ -272,7 +277,11 @@ main{
     transform: translate(92px, -10px);
 }
 /* Partner's Section */
-
+.partners-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .partners-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -296,6 +305,9 @@ main{
 }
 .unified-platfrom-section{
     padding: var(--space-xl);
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .unified-platfrom-section h3{
     max-width: 50%;
@@ -303,6 +315,11 @@ main{
 }
 
 /* Graphic Grid */
+.graphic-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .graphic-grid{
     display: grid;
     grid-template-areas: 
@@ -349,6 +366,9 @@ main{
 
 /* Integration Section */
 .integration-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
     color: var(--text-light);
     background-color: var(--primary-accent);
 }
@@ -380,6 +400,11 @@ main{
     border-radius: 20px;
 }
 /* WHY SWIPE SECTION */
+.why-swipe-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .why-swipe-section .card-container{
     display: flex;
     margin: var(--space-lg) 0 0;
@@ -392,4 +417,49 @@ main{
 }
 .why-swipe-section .secondary-text{
     color: var(--text-dark);
+}
+
+/* Globle Section */
+.globle-section{
+    background-color: var(--primary-accent);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--text-light);
+    padding: calc(var(--space-xl)*3) 0;
+    position: relative;
+}
+.globle-section a{
+    color: var(--light-blue);
+}
+.globle-section a:hover{
+    color: var(--text-light);
+}
+.globle-section .card-container{
+    display: flex;
+    margin: calc(var(--space-xl)*2) 0;
+}
+.globle-section .card-container .card{
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 var(--space-sm) 0 0;
+    margin: 0 var(--space-md) 0 0;
+}
+.globle-section .card-container .card h2{
+    border-left:  2px solid var(--light-blue);
+    padding: 0 0 0 var(--space-sm);
+    line-height: 28px;
+}
+#glob{
+    max-width: 644px;
+    position: absolute;
+    top:10%;
+    opacity: 0.25;
+    z-index: 3;
+}
+
+/* virtual-event-section */
+.virtual-event-section {
+    display: flex;
+    justify-content: center;
 }
