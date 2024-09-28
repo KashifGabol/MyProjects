@@ -686,3 +686,97 @@ margin: var(--space-xl) 0 0 0;
     font-weight: 700;
     font-size: 20px;
 }
+
+/* Responsive */
+
+/* 1144px padding */
+@media only screen and (max-width: 1144px) {
+    .section-container{
+        padding: 0 var(--space-md);
+    }
+    .partners-grid{
+        width: 100%;
+        height: auto;
+    }
+    .unified-platfrom-section h2{
+        width: 100%;
+    }
+}
+/* Tablet Size */
+@media only screen and (max-width: 768px){
+    .partners-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .integration-section .col-left{
+        width: 60%;
+    }
+    .integration-section .col-right{
+        width: 40%;
+    }
+    .integration-section .card-container{
+        flex-direction: column;
+    }
+    .integration-section .card-container .card{
+        width: 100%;
+    }
+    .why-swipe-section .card-container {
+        flex-wrap: wrap;
+    }
+    .why-swipe-section .card-container .card{
+        width: 50%;
+        margin: var(--space-md) 0;
+    }
+    .globle-section .card-container {
+        flex-wrap: wrap;
+    }
+    .globle-section .card-container .card{
+        width: 50%;
+   
+    }
+    .virtual-event-section .swipe-session-card{
+        width: 100%;
+    }
+    .virtual-event-section .swipe-session-card .secondary-text{
+        width: 100%;
+    }
+    .virtual-event-section .swipe-session-card .card-top{
+        width: 60%;
+    }
+}
+
+/* Mobil Screen */
+@media only screen and (max-width:550px){
+    .two-column{
+        flex-direction: column;
+    }
+
+    .partners-grid{
+        grid-template-columns: 1fr ;
+    }
+    .two-column .col-left{
+        width: 100%;
+    }
+    .two-column .col-right{
+        width: 100%;
+    }
+    .unified-platfrom-section h2{
+        width: 100%;
+    }
+    .integration-section .card-container{
+        flex-direction: column;
+    }
+    .integration-section .col-right{
+        display: none;
+    }
+    .why-swipe-section .card-container .card{
+        width: 100%;
+        margin: var(--space-md) 0;
+    }
+}
+
+
+body,html{
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
