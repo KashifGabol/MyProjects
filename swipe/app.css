@@ -34,6 +34,11 @@
     --space-lg: 32px;
     --space-xl: 64px;
 
+    --gradient-color-1:#ef008f;
+    --gradient-color-2:#6ec3f4;
+    --gradient-color-3:#7038ff;
+    --gradient-color-4:#ffba27;
+
     --standard-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
     --primary-gradient:linear-gradient(101.33deg, #08209a 0.76%, #6563ff 33.33%, #36c5f0 76.92%, #83e2ff 96.96%);
 }
@@ -190,6 +195,7 @@ p{
     width: 100%;
     max-width: var(--standard-width);
     padding: 0 var(--space-md);
+    margin: 0 0 120px 0;
 }
 .menu{
     display: flex;
@@ -245,7 +251,18 @@ p{
     box-sizing: border-box;
     padding: 0 var(--space-md) 0 0;
 }
+/* Animation */
 
+#gradient-canvas{
+    background-color: var(--purple-1);
+    width: 200%;
+    height: 970px;
+    transform: rotate(-10deg);
+    position: absolute;
+    top: -600px;
+    left: -50%;
+    z-index: -1;
+}
 /* Hero */
 .hero{
     width: 100%;
@@ -310,6 +327,7 @@ margin: var(--space-xl) 0 0 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: var(--bg-light);
 }
 .unified-platfrom-section h3{
     max-width: 50%;
@@ -321,6 +339,7 @@ margin: var(--space-xl) 0 0 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: var(--bg-light);
 }
 .graphic-grid{
     display: grid;
@@ -367,13 +386,39 @@ margin: var(--space-xl) 0 0 0;
 }
 
 /* Integration Section */
+
 .integration-section{
     width: 100%;
     display: flex;
     justify-content: center;
     color: var(--text-light);
-    background-color: var(--primary-accent);
+    padding: calc(var(--space-xl)*3) 0;
+    position: relative;
+    z-index: 1;
 }
+
+.integration-section::before{
+    content: "";
+    width: 100%;
+    height: 1100px;
+    background-color: var(--primary-accent);
+    top: -32px;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    transform: skewY(-10deg);
+}
+.integration-section::after{
+    content: "";
+    width: 100%;
+    height: 50%;
+    background-color: var(--bg-light);
+    top: 0;
+    left: 0;
+    z-index: -2;
+    position: absolute;
+}
+
 .integration-section .card-container{
     display: flex;
     margin: var(--space-lg) 0;
@@ -406,6 +451,7 @@ margin: var(--space-xl) 0 0 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: calc(var(--space-xl)*3) 0;
 }
 .why-swipe-section .card-container{
     display: flex;
@@ -423,14 +469,26 @@ margin: var(--space-xl) 0 0 0;
 
 /* Globle Section */
 .globle-section{
-    background-color: var(--primary-accent);
+
     width: 100%;
     display: flex;
     justify-content: center;
     color: var(--text-light);
-    padding: calc(var(--space-xl)*3) 0;
+    padding: calc(var(--space-xl)*3) 0 0 0;
     position: relative;
 }
+.globle-section::before{
+    content: "";
+    width: 100%;
+    height: 1200px;
+    position: absolute;
+    background-color: var(--primary-accent);
+    top: -32px;
+    left: 0;
+    transform: skewY(-10deg);
+    z-index: -1;
+}
+
 .globle-section a{
     color: var(--light-blue);
 }
@@ -465,6 +523,18 @@ margin: var(--space-xl) 0 0 0;
     display: flex;
     justify-content: center;
     margin: calc(var(--space-xl)*3) 0 ;
+    position: relative;
+}
+
+.virtual-event-section::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -32px;
+    left: 0;
+    background-color: var(--bg-white);
+    z-index: -1;
 }
 .virtual-event-section .primary-button{
     background-color: var(--light-blue);
