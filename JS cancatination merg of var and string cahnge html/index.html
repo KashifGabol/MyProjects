@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>
+        My Cat Name is <span id="catname" >Pinki</span>
+        <!-- catname id bnai ha  -->
+    </h2>
+<script>
+        var catname = document.getElementById ("catname"); 
+        // id ko get kia ha JS mai catname var k sath 
+        var pinki = catname.innerText;
+        // catname html ko pinki bnaya ha var
+        pinki = pinki + "Is my best Cat ";
+        // html pinki k sath sting add ki ha 
+        catname.innerText = pinki ;
+        // ab html ki file pinki display hogi 
+</script>
+
+</body>
+</html>
