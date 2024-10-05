@@ -4,11 +4,14 @@
   "description": "bootstrap website",
   "main": "index.js",
   "scripts": {
-    "sass:build": "sass scss:css"
+    "sass:build": "sass scss:css",
+    "sass:watch": "sass --watch scss:css"
   },
   "author": "Kashif",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "bootstrap": "^5.3.3",
     "sass": "^1.79.4"
   }
 }
