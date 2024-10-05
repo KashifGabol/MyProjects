@@ -1,8 +1,6 @@
 // Font
 $font-family-sans-serif: 'Open Sans', sans-serif;
 
-@import '../node_modules/bootstrap/scss/bootstrap';
-
 $primary: #c167ef;
 $secondary: #10bcee;
 $light: #f3f6f9;
@@ -28,3 +26,5 @@ $btn-padding-x-sm: $btn-padding-x;
 $btn-padding-y: $btn-padding-y ;
 $btn-padding-y-lg: $btn-padding-y ;
 $btn-padding-y-sm: $btn-padding-y ;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
