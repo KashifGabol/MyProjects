@@ -1,0 +1,30 @@
+// Font
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$primary: #c167ef;
+$secondary: #10bcee;
+$light: #f3f6f9;
+$dark:#2b3041;
+
+// navBar
+$navbar-padding-y: 1rem;
+$navbar-dark-color: #fff;
+$navbar-dark-hover-color:$secondary;
+
+// button radius
+$button-radius : 50px;
+$btn-padding-x : 30px; 
+$btn-padding-y : 10px;
+
+$btn-border-radius: $button-radius;
+$btn-border-radius-sm: $button-radius;
+$btn-border-radius-lg: $button-radius;
+
+$btn-padding-x: $btn-padding-x;
+$btn-padding-x-lg: $btn-padding-x;
+$btn-padding-x-sm: $btn-padding-x;
+$btn-padding-y: $btn-padding-y ;
+$btn-padding-y-lg: $btn-padding-y ;
+$btn-padding-y-sm: $btn-padding-y ;
