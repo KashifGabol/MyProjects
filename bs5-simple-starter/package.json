@@ -1,0 +1,14 @@
+{
+  "name": "bs5-simple-starter",
+  "version": "1.0.0",
+  "description": "bootstrap website",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass scss:css"
+  },
+  "author": "Kashif",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.79.4"
+  }
+}
