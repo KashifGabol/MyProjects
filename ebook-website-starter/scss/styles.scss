@@ -1,3 +1,11 @@
 .navbar .btn-outline-light:hover{
     color: var(--bs-dark);
 }
+
+@media (max-width : 1000px){
+    .hero .image-container{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
