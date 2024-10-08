@@ -49,5 +49,26 @@ document.querySelector("span[data-time=minutes]").textContent = localTime.getMin
 document.querySelector("span[data-time=seconds]").textContent = localTime.getSeconds().toString().padStart(2, 0);
 
 }, 1000);
-       
 
+const imageGallery = [
+    {
+        src :"/assets/gallery/image1.jpg",
+        alt :"Thumbnail Image 1"
+    },
+    {
+        src: "/assets/gallery/image2.jpg",
+        alt :"Thumbnail Image 2"
+    },
+    {
+        src :"/assets/gallery/image3.jpg",
+        alt :"Thumbnail Image 3"
+    },
+];
+
+let mainImage = document.querySelector("#gallery > img");
+mainImage.src=imageGallery[0].src;
+mainImage.alt=imageGallery[0].alt;
+
+imageGallery.forEach(function(image, index){
+
+});
