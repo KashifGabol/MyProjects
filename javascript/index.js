@@ -56,19 +56,46 @@ const imageGallery = [
         alt :"Thumbnail Image 1"
     },
     {
-        src: "/assets/gallery/image2.jpg",
+        src : "/assets/gallery/image2.jpg",
         alt :"Thumbnail Image 2"
     },
     {
         src :"/assets/gallery/image3.jpg",
         alt :"Thumbnail Image 3"
-    },
+    }
 ];
 
-let mainImage = document.querySelector("#gallery > img");
-mainImage.src=imageGallery[0].src;
-mainImage.alt=imageGallery[0].alt;
+// let mainImage = document.querySelector("#gallery > img");
+// mainImage.src=imageGallery[0].src;
+// mainImage.alt=imageGallery[0].alt;
 
-imageGallery.forEach(function(image, index){
+// imageGallery.forEach(function(image, index){
+
+// });
+
+// for(i in imageGallery ){
+//     console.log(imageGallery [i]);
+// }
+let mainImage = document.querySelector("#gallery > img");
+let thumnails = document.querySelector("#gallery .thumbnails");
+mainImage.src = imageGallery[0].src;
+mainImage.alt = imageGallery[0].alt;
+
+
+imageGallery.forEach(function (image, index){
+    let thumb = document.createElement("img");
+    thumb.src = image.src;
+    thumb.alt = image.alt;
+    thumb.dataset.arrayIndex = index;
+    thumb.dataset.selected = index === 0 ? true : false ;
+    thumnails.appendChild (thumb);
+
+    // if (index === 1 ){
+    //     thumb.dataset.selected = true ;
+    // }
+
+    // else{
+    //     thumb.dataset.selected = false ;
+    // }
 
 });
