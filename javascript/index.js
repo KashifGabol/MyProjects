@@ -81,19 +81,9 @@ function cloclHandler (){
 
 // gallery handler
 function galleryHandler(){
-    // let mainImage = document.querySelector("#gallery > img");
-// mainImage.src=imageGallery[0].src;
-// mainImage.alt=imageGallery[0].alt;
 
-// imageGallery.forEach(function(image, index){
-
-// });
-
-// for(i in imageGallery ){
-//     console.log(imageGallery [i]);
-// }
 let mainImage = document.querySelector("#gallery > img");
-let thumnails = document.querySelector("#gallery .thumbnails");
+let thumbnails = document.querySelector("#gallery .thumbnails");
 mainImage.src = imageGallery[0].src;
 mainImage.alt = imageGallery[0].alt;
 
@@ -104,16 +94,23 @@ imageGallery.forEach(function (image, index){
     thumb.alt = image.alt;
     thumb.dataset.arrayIndex = index;
     thumb.dataset.selected = index === 0 ? true : false ;
-    thumnails.appendChild (thumb);
+    
+    thumb.addEventListener("click", function (e) {
+        let selectedIndex = e.target.dataset.arrayIndex;
+        let selectedImage = imageGallery[selectedIndex];
+        mainImage.src = selectedImage.src;
+        mainImage.alt = selectedImage.alt;
 
-    // if (index === 1 ){
-    //     thumb.dataset.selected = true ;
-    // }
+        // Properly iterating through all thumbnails to deselect
+        thumbnails.querySelectorAll("img").forEach(function (img) {
+            img.dataset.selected = false;
+        });
 
-    // else{
-    //     thumb.dataset.selected = false ;
-    // }
+        // Set the clicked thumbnail as selected
+        e.target.dataset.selected = true;
+    });
 
+    thumbnails.appendChild(thumb);  // Append each thumbnail
 });
 }
 
