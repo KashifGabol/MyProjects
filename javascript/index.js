@@ -156,17 +156,15 @@ imageGallery.forEach(function (image, index){
 
 function productsHandler(){
 
-    // <div class="product-item">
-    // <img src="./assets/products/img6.png" alt="AstroFiction">
-    // <div class="product-details">
-    //    <h3 class="product-title">AstroFiction</h3>
-    //    <p class="product-author">John Doe</p>
-    //    <p class="price-title">Price</p>
-    //    <p class="product-price">$ 49.90</p>
-    // </div>
-
     //create html elements 
     let productSection = document.querySelector(".products-area");
+    // array filter
+    let freeProduct = products.filter(function(item){
+        return !item.price || item.price <= 0 ;
+    });
+    let paidProduct = products.filter(function(item){
+        return item.price > 0 ;
+    });
     //create element for each product
     products.forEach(function(product, index){
     // create html element div
@@ -177,12 +175,59 @@ function productsHandler(){
         let productImage =document.createElement("img");
         productImage.src = product.image;
         product.alt = product.title;
-    //   add all child html of product
+
+        // Product details div class 
+        let productDetails = document.createElement("div");
+        // add class in div
+        productDetails.classList.add("product-details");
+
+        // add product details to html using js title, author, price title and price 
+        let prodcutTitle = document.createElement("h3");
+        prodcutTitle.classList.add("product-title");
+        // adding text content 
+        prodcutTitle.textContent = product.title;
+        // adding product author 
+        let prodcutAuthor = document.createElement("p");
+        prodcutAuthor.classList.add("product-author");
+        // adding authro content 
+        prodcutAuthor.textContent = product.author;
+
+        // adding price title
+        let priceTitle = document.createElement("p");
+        priceTitle.classList.add("price-title");
+        // adding price content 
+        priceTitle.textContent = "Price";
+
+                // adding product price
+                let productPrice = document.createElement("p");
+                productPrice.classList.add("product-price");
+                // adding price content 
+                productPrice.textContent =  product.price > 0 ? "$" + product.price.toFixed(2) : "Free" ;
+
+
+
+
+        // apend to product details product title
+        productDetails.append(prodcutTitle);
+        // apend to parrent product authro
+        productDetails.append(prodcutAuthor);
+                // apend to parrent product authro
+                productDetails.append(priceTitle);
+                                        // apend to parrent product authro
+        productDetails.append(productPrice);
+    //   add all child html of product parrent element
         productElm.append(productImage);
+        productElm.append(productDetails);
         // add individual products to product section
         productSection.append(productElm);
 
     });
+
+    // show product length and filter
+    document.querySelector(".products-filter label[for=all] span.product-amount").textContent = products.length;
+    document.querySelector(".products-filter label[for=paid] span.product-amount").textContent = paidProduct.length;
+    document.querySelector(".products-filter label[for=free] span.product-amount").textContent = freeProduct.length;
+
 }
 
 manueHandler();
