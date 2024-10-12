@@ -1,4 +1,7 @@
 
+const weatherApiKey  = "787a8b62cd536edd9e12481a1e53beec";
+const weatherApiURL = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}&units=metric`;
+
 // gallery const
 
 const imageGallery = [
@@ -84,25 +87,8 @@ function greetingHandler(){
     } else {
         greetingText = "Welcome";
     }
-    
-    const userLocation = "New York";
-    const weatherCondition = "sunny";
-    let temperatur  = 25;
-    let celsiusText = `The weather is ${weatherCondition} in ${userLocation} and it's ${temperatur}°C outside.`;
-    let fahrText = `The weather is ${weatherCondition} in ${userLocation} and it's ${celcusToFohr (temperatur).toString()}°F outside.`;
-    
-    // document.querySelector("#weather").innerHTML= greetingText;
-    document.querySelector("p#weather").innerHTML = celsiusText;
     document.querySelector("#greeting").innerHTML = greetingText;
-    document.querySelector(".weather-group").addEventListener("click", function(e)
-{
-    if (e.target.id == "celsius"){
-        document.querySelector("p#weather").innerHTML = celsiusText;           
-    } else if (e.target.id = "fahr"){
-        document.querySelector("p#weather").innerHTML = fahrText;
-    }
 
-});
 }
 
 // colock handler
@@ -152,86 +138,150 @@ imageGallery.forEach(function (image, index){
 });
 }
 
+// Papulate products 
+
+function papulateProdcuts(productList){
+    
+        //create html elements 
+        let productSection = document.querySelector(".products-area");
+
+        // clear the section products
+        productSection.textContent = "";
+        //create element for each product
+        productList.forEach(function(product, index){
+            // create html element div
+                let productElm = document.createElement("div");
+            //add class product item
+                productElm.classList.add("product-item");
+            //creating image html product
+                let productImage =document.createElement("img");
+                productImage.src = product.image;
+                product.alt = product.title;
+        
+                // Product details div class 
+                let productDetails = document.createElement("div");
+                // add class in div
+                productDetails.classList.add("product-details");
+        
+                // add product details to html using js title, author, price title and price 
+                let prodcutTitle = document.createElement("h3");
+                prodcutTitle.classList.add("product-title");
+                // adding text content 
+                prodcutTitle.textContent = product.title;
+                // adding product author 
+                let prodcutAuthor = document.createElement("p");
+                prodcutAuthor.classList.add("product-author");
+                // adding authro content 
+                prodcutAuthor.textContent = product.author;
+        
+                // adding price title
+                let priceTitle = document.createElement("p");
+                priceTitle.classList.add("price-title");
+                // adding price content 
+                priceTitle.textContent = "Price";
+        
+                        // adding product price
+                        let productPrice = document.createElement("p");
+                        productPrice.classList.add("product-price");
+                        // adding price content 
+                        productPrice.textContent =  product.price > 0 ? "$" + product.price.toFixed(2) : "Free" ;
+        
+        
+        
+        
+                // apend to product details product title
+                productDetails.append(prodcutTitle);
+                // apend to parrent product authro
+                productDetails.append(prodcutAuthor);
+                        // apend to parrent product authro
+                        productDetails.append(priceTitle);
+                                                // apend to parrent product authro
+                productDetails.append(productPrice);
+            //   add all child html of product parrent element
+                productElm.append(productImage);
+                productElm.append(productDetails);
+                // add individual products to product section
+                productSection.append(productElm);
+        
+            });
+}
 //Product section
 
 function productsHandler(){
 
-    //create html elements 
-    let productSection = document.querySelector(".products-area");
-    // array filter
-    let freeProduct = products.filter(function(item){
-        return !item.price || item.price <= 0 ;
-    });
+
+    // arrow fucntion array filter
+    let freeProduct = products.filter(item => !item.price || item.price <= 0) ;
+
+
     let paidProduct = products.filter(function(item){
         return item.price > 0 ;
     });
-    //create element for each product
-    products.forEach(function(product, index){
-    // create html element div
-        let productElm = document.createElement("div");
-    //add class product item
-        productElm.classList.add("product-item");
-    //creating image html product
-        let productImage =document.createElement("img");
-        productImage.src = product.image;
-        product.alt = product.title;
 
-        // Product details div class 
-        let productDetails = document.createElement("div");
-        // add class in div
-        productDetails.classList.add("product-details");
-
-        // add product details to html using js title, author, price title and price 
-        let prodcutTitle = document.createElement("h3");
-        prodcutTitle.classList.add("product-title");
-        // adding text content 
-        prodcutTitle.textContent = product.title;
-        // adding product author 
-        let prodcutAuthor = document.createElement("p");
-        prodcutAuthor.classList.add("product-author");
-        // adding authro content 
-        prodcutAuthor.textContent = product.author;
-
-        // adding price title
-        let priceTitle = document.createElement("p");
-        priceTitle.classList.add("price-title");
-        // adding price content 
-        priceTitle.textContent = "Price";
-
-                // adding product price
-                let productPrice = document.createElement("p");
-                productPrice.classList.add("product-price");
-                // adding price content 
-                productPrice.textContent =  product.price > 0 ? "$" + product.price.toFixed(2) : "Free" ;
-
-
-
-
-        // apend to product details product title
-        productDetails.append(prodcutTitle);
-        // apend to parrent product authro
-        productDetails.append(prodcutAuthor);
-                // apend to parrent product authro
-                productDetails.append(priceTitle);
-                                        // apend to parrent product authro
-        productDetails.append(productPrice);
-    //   add all child html of product parrent element
-        productElm.append(productImage);
-        productElm.append(productDetails);
-        // add individual products to product section
-        productSection.append(productElm);
-
-    });
-
+    papulateProdcuts(products);
     // show product length and filter
     document.querySelector(".products-filter label[for=all] span.product-amount").textContent = products.length;
     document.querySelector(".products-filter label[for=paid] span.product-amount").textContent = paidProduct.length;
     document.querySelector(".products-filter label[for=free] span.product-amount").textContent = freeProduct.length;
 
+    let productFilter = document.querySelector(".products-filter");
+    productFilter.addEventListener("click", function(e){
+        if(e.target.id === "all"){
+            papulateProdcuts(products);
+        }else if(e.target.id === "paid"){
+            papulateProdcuts(paidProduct);
+        }else if(e.target.id === "free"){
+            papulateProdcuts(freeProduct);
+        }
+    });
 }
+
+function footerHandler(){
+    let crruntYear = new Date().getFullYear();
+document.querySelector("footer").textContent = `® ${crruntYear} - All Right Reversed`;
+}
+
+function weatherHandler(){
+    navigator.geolocation.getCurrentPosition(function(position){
+
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+        let url = weatherApiURL
+        .replace("{lat}",latitude)
+        .replace("{lon}",longitude)
+        .replace("{API key}",weatherApiKey);
+        fetch(url)
+        .then (response => response.json())
+        .then (data => {
+    
+            const location = data.weather[0].description;
+            const condition = data.name;
+            const temperatur  = data.main.temp;
+            let celsiusText = `The weather is ${condition} in ${location} and it's ${temperatur}°C outside.`;
+            let fahrText = `The weather is ${condition} in ${location} and it's ${celcusToFohr (temperatur).toString()}°F outside.`;
+            
+            // document.querySelector("#weather").innerHTML= greetingText;
+            document.querySelector("p#weather").innerHTML = celsiusText;
+         
+            document.querySelector(".weather-group").addEventListener("click", function(e)
+        {
+            if (e.target.id == "celsius"){
+                document.querySelector("p#weather").innerHTML = celsiusText;           
+            } else if (e.target.id = "fahr"){
+                document.querySelector("p#weather").innerHTML = fahrText;
+            }
+        
+        });
+        });
+    
+    });
+}
+
 
 manueHandler();
 greetingHandler();
 cloclHandler ();
 galleryHandler();
-productsHandler()
+productsHandler();
+footerHandler();
+weatherHandler();
