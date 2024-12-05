@@ -1,24 +1,24 @@
-const mongoose=require("mongoose")
-
+const mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost:27017/crypto")
-.then(()=>{
-    console.log("mongodb connected")
+.then(() => {
+    console.log("MongoDB connected");
 })
-.catch(()=>{
-    console.log("failed to connect")
-})
+.catch((err) => {
+    console.log("Failed to connect", err);  // Log the actual error
+});
 
-const logInSchema=new mongoose.Schema({
-    name:{
-        type:String,
-        require:true
+const logInSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true  // Corrected from 'require' to 'required'
     },
-    password:{
-        type:String,
-        require:true
+    password: {
+        type: String,
+        required: true  // Corrected from 'require' to 'required'
     }
-})
-const collection=new mongoose.model("Collection1",logInSchema)
+});
 
-module.exports=collection
+const collection = new mongoose.model("User", logInSchema);  // Use 'User' as the model name
+
+module.exports = collection;
