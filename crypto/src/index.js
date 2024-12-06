@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
-const collection = require("./mongodb"); // Ensure this is correctly set up
+const collection = require("./mongodb").default; // Ensure this is correctly set up
 
 // Correct template path
 const templatePath = path.join(__dirname, '../templates');  // Make sure 'templates' folder is at the correct location
