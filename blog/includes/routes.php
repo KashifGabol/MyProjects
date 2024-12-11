@@ -10,7 +10,7 @@ const INDEX_ROUTE = 'index';
 function normalizUri(string $uri): string
 {
     $uri = strtolower(trim($uri, '/'));
-    return $uri === '' ? INDEX_ROUTE : $uri;
+    return $uri === INDEX_URI ? INDEX_ROUTE : $uri;
 }
 
 //2- GET/POST otherwise 404
@@ -18,15 +18,13 @@ function notFound(): void
 {
     http_response_code(404);
     echo "Page not Found";
+    exit;
 }
 
 //3- file path - php file path
 function getFilePath($uri, $method): string
 {
-    return ROUTES_DIR
-        . '/' . normalizUri($uri)
-        . '-' . strtolower($method)
-        . '.php';
+    return ROUTES_DIR . '/' . normalizUri($uri) . '-' . strtolower($method) . '.php';
 }
 
 function dispatch(string $uri, string $method): void
